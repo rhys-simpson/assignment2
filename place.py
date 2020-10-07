@@ -22,19 +22,17 @@ class Place:
 
     def __str__(self):
         """Return a string of Place object"""
-        return "{} - {} in {} priority {}".format(self.visited_status, self.name, self.country, self.priority)
+        return "{},{},{},{}".format(self.name, self.country, self.priority, self.visited_status)
 
     def mark_visited(self):
         """Mark a place as visited"""
-        self.visited_status = " "
+        self.visited_status = True
 
     def mark_unvisited(self):
         """Mark a place as unvisited"""
-        self.visited_status = "*"
+        self.visited_status = False
 
     def is_important(self):
         """Determine if a place is important (important if - priority <= 2)"""
         if self.priority <= 2:
             return "Place is important"
-
-    pass
