@@ -23,17 +23,23 @@ class PlaceCollection:
         in_file.close()
         return self.places
 
+    # TODO
     def save_places(self):
         """Save places from the places list to the csv file"""
 
+    # TODO
     def add_place(self):
         """Add a place object to places attribute"""
 
     def get_unvisited_places(self):
         """Retrieve number of unvisited places in list"""
+        unvisited_places_number = 0
+        for place in self.places:
+            if place[3] == "n":
+                unvisited_places_number += 1
+        return unvisited_places_number
 
+    # TODO
     def sort_places(self):
         """Sorted by..., then priority"""
         # might have to do __lt__
-
-    pass
