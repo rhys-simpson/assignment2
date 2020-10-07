@@ -23,6 +23,12 @@ def run_tests():
     new_place = Place("Malagar", "Spain", 1, False)
     # Test __str__ method
     print(new_place)
+    # Test mark visited method
+    new_place.mark_visited()
+    print(new_place)
+    # Test mark unvisited method
+    new_place.mark_unvisited()
+    print(new_place)
 
 
 run_tests()
