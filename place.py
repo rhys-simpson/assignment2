@@ -27,11 +27,11 @@ class Place:
 
     def mark_visited(self):
         """Mark a place as visited"""
-        return self.visited_status == "*"
+        self.visited_status = ""
 
     def mark_unvisited(self):
         """Mark a place as unvisited"""
-        return self.visited_status == ""
+        self.visited_status = "*"
 
     def is_important(self):
         """Determine if a place is important (important if - priority <= 2)"""
