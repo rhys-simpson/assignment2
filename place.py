@@ -22,12 +22,11 @@ class Place:
 
     def __str__(self):
         """Return a string of Place object"""
-        return "Name: {} Country: {} Priority: {} Visited Status: {}".format(self.name, self.country, self.priority,
-                                                                             self.visited_status)
+        return "{} - {} in {} priority {}".format(self.visited_status, self.name, self.country, self.priority)
 
     def mark_visited(self):
         """Mark a place as visited"""
-        self.visited_status = ""
+        self.visited_status = " "
 
     def mark_unvisited(self):
         """Mark a place as unvisited"""
