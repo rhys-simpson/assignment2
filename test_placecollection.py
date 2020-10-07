@@ -15,9 +15,11 @@ def run_tests():
     # Test loading places
     print("Test loading places:")
     place_collection.load_places('places.csv')
+    # TODO works with for loop need to figure out how to do in class
     print(place_collection)
     assert place_collection.places  # assuming CSV file is non-empty, non-empty list is considered True
 
+    # TODO
     # Test adding a new Place with values
     print("Test adding new place:")
     place_collection.add_place(Place("Smithfield", "Australia", 5, False))
@@ -32,6 +34,9 @@ def run_tests():
     # TODO: Test saving places (check CSV file manually to see results)
 
     # TODO: Add more tests, as appropriate, for each method
+    # Test calculating number of unvisited places
+    print("Test retrieving number of unvisited places")
+    print(place_collection.get_unvisited_places())
 
 
 run_tests()
