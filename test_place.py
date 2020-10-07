@@ -1,9 +1,13 @@
-"""(Incomplete) Tests for Place class."""
+"""
+Assignment 2 - Place Class test
+Rhys Simpson
+"""
+
 from place import Place
 
 
 def run_tests():
-    """Test Place class."""
+    """Test Place class"""
 
     # Test empty place (defaults)
     print("Test empty place:")
@@ -12,7 +16,7 @@ def run_tests():
     assert default_place.name == ""
     assert default_place.country == ""
     assert default_place.priority == 0
-    assert not default_place.is_visited
+    assert not default_place.visited_status
 
     # Test initial-value place
     print("Test initial-value place:")
