@@ -30,5 +30,18 @@ def run_tests():
     new_place.mark_unvisited()
     print(new_place)
 
+    # Test marking multiple places visited/ unvisited and testing is_important method
+    print()
+    print("Test multiple places and is_important:")
+    second_place = Place("Lima", "Peru", 3, False)
+    places = [new_place, second_place]
+    for place in places:
+        place.mark_visited()
+        print(place)
+        place.mark_unvisited()
+        print(place)
+        if place.is_important():
+            print(place.name)
+
 
 run_tests()
