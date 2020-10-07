@@ -15,20 +15,20 @@ def run_tests():
     # Test loading places
     print("Test loading places:")
     place_collection.load_places('places.csv')
-    # TODO works with for loop need to figure out how to do in class
     print(place_collection)
     assert place_collection.places  # assuming CSV file is non-empty, non-empty list is considered True
 
-    # TODO
     # Test adding a new Place with values
     print("Test adding new place:")
     place_collection.add_place(Place("Smithfield", "Australia", 5, False))
     print(place_collection)
 
-    # Test sorting places
+    # TODO
+    # Test sorting places with priority
     print("Test sorting - priority:")
     place_collection.sort("priority")
     print(place_collection)
+
     # TODO: Add more sorting tests
 
     # TODO: Test saving places (check CSV file manually to see results)
