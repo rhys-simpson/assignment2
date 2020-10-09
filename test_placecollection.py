@@ -23,13 +23,25 @@ def run_tests():
     place_collection.add_place(Place("Smithfield", "Australia", 5, False))
     print(place_collection)
 
-    # TODO
     # Test sorting places with priority
     print("Test sorting - priority:")
     place_collection.sort("priority")
     print(place_collection)
 
-    # TODO: Add more sorting tests
+    # Test sorting places by name
+    print("Test sorting - name:")
+    place_collection.sort("name")
+    print(place_collection)
+
+    # Test sorting places by country
+    print("Test sorting - country:")
+    place_collection.sort("country")
+    print(place_collection)
+
+    # Test sorting places by visited status
+    print("Test sorting - visited status:")
+    place_collection.sort("visited")
+    print(place_collection)
 
     # TODO: Test saving places (check CSV file manually to see results)
 
