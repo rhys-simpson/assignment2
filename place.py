@@ -7,7 +7,7 @@ Rhys Simpson
 class Place:
     """Represent a Place object"""
 
-    def __init__(self, name, country, priority, visited_status):
+    def __init__(self, name, country, priority, is_visited=True):
         """Initialise a Place instance.
 
         name: string, name of place
@@ -18,19 +18,19 @@ class Place:
         self.name = name
         self.country = country
         self.priority = priority
-        self.visited_status = visited_status
+        self.is_visited = is_visited
 
     def __str__(self):
         """Return a string of Place object"""
-        return "{},{},{},{}".format(self.name, self.country, self.priority, self.visited_status)
+        return "{},{},{},{}".format(self.name, self.country, self.priority, self.is_visited)
 
     def mark_visited(self):
         """Mark a place as visited"""
-        self.visited_status = True
+        self.is_visited = True
 
     def mark_unvisited(self):
         """Mark a place as unvisited"""
-        self.visited_status = False
+        self.is_visited = False
 
     def is_important(self):
         """Determine if a place is important (important if - priority <= 2)"""
