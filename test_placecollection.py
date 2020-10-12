@@ -46,10 +46,9 @@ def run_tests():
     print("Test saving places: ")
     place_collection.save_places("places.csv")
 
-    # TODO: Add more tests, as appropriate, for each method
     # Test calculating number of unvisited places
-    # print("Test retrieving number of unvisited places")
-    # print(place_collection.get_unvisited_places())
+    print("Test retrieving number of unvisited places")
+    print(place_collection.get_unvisited_places())
 
 
 run_tests()
