@@ -57,15 +57,15 @@ class PlaceCollection:
         out_file = open(filename, "w")
         for place_data in self.places:
             parts = str(place_data).split(",")
-            print("{},{},{},{}".format(parts[0], parts[1], parts[2], parts[3]), file=out_file)
+            print("{},{},{},{}".format(*parts), file=out_file)
             self.places.sort(key=attrgetter("is_visited"))
         out_file.close()
 
-    #TODO - fix
-    # def get_unvisited_places(self):
-        # """Retrieve number of unvisited places in list"""
-        # unvisited_places_number = 0
-        # for places_data in self.places:
-            # if places_data[3] is False:
-                # unvisited_places_number += 1
-        # return unvisited_places_number
+    def get_unvisited_places(self):
+        """Retrieve number of unvisited places in list"""
+        unvisited_places_number = 0
+        for places_data in self.places:
+            parts = str(places_data).split(",")
+            if parts[3] == "False":
+                unvisited_places_number += 1
+        return unvisited_places_number
