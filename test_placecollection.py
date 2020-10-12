@@ -40,15 +40,16 @@ def run_tests():
 
     # Test sorting places by visited status
     print("Test sorting - visited status:")
-    place_collection.sort("visited")
+    place_collection.sort("is_visited")
     print(place_collection)
 
-    # TODO: Test saving places (check CSV file manually to see results)
+    print("Test saving places: ")
+    place_collection.save_places("places.csv")
 
     # TODO: Add more tests, as appropriate, for each method
     # Test calculating number of unvisited places
-    print("Test retrieving number of unvisited places")
-    print(place_collection.get_unvisited_places())
+    # print("Test retrieving number of unvisited places")
+    # print(place_collection.get_unvisited_places())
 
 
 run_tests()
